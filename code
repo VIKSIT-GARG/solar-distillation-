@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Distillation Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            margin: 10px auto;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .upload-section {
+            margin-top: 30px;
+        }
+        .upload-box {
+            display: inline-block;
+            width: 200px;
+            height: 150px;
+            border: 2px dashed #007bff;
+            margin: 10px;
+            line-height: 150px;
+            text-align: center;
+            color: #007bff;
+        }
+        .video-section {
+            margin-top: 30px;
+        }
+        .info-box {
+            padding: 20px;
+            background-color: #e6f7ff;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solar Distillation Project</h1>
+        <p>Hand prepared by <strong>AI-ML(L)</strong></p>
+        <button class="button" onclick="showInfo('team')">Team Information</button>
+        <button class="button" onclick="showInfo('description')">Project Description</button>
+        <button class="button" onclick="showInfo('features')">Key Features</button>
+        <button class="button" onclick="showInfo('applications')">Applications</button>
+        <button class="button" onclick="showInfo('usecase')">Use-Case</button>
+        
+        <div id="info" class="info-box"></div>
+        
+        <div class="upload-section">
+            <h2>Upload Project Pictures</h2>
+            <div class="upload-box">Upload Image 1</div>
+            <div class="upload-box">Upload Image 2</div>
+            <div class="upload-box">Upload Image 3</div>
+        </div>
+        
+        <div class="video-section">
+            <h2>Project Video</h2>
+            <video width="600" controls>
+                <source src="your-video-file.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(type) {
+            let content = {
+                'team': '<h2>Team Members</h2><p>Zubair Alam</p><p>Revant Jain</p><p>Rohan Jha</p><p>Viksit Garg</p><p>Nasar Iqbal</p><p>Saksham Sharma</p><p>Suryansh Jha</p><br><p>We are the students of AI-ML B.Tech first year and under the guidance of Mrs. Kavita Gupta and Dr. Poonam Gupta, this project was a success in all aspects, whether it is delivering the motive of this project or making a fully functional handmade model.</p>',
+                'description': '<h2>Project Description</h2><p>Solar distillation is a process that uses solar energy to purify water by evaporating it and then condensing the vapor to produce clean, drinkable water. This method mimics the natural water cycle, where the sun heats water, it evaporates, and then condenses into fresh water.</p><h3>How It Works:</h3><ul><li><strong>Solar Energy Absorption</strong> – Sunlight heats water in a basin or container.</li><li><strong>Evaporation</strong> – As the water warms, it evaporates, leaving behind impurities like salts, heavy metals, and microbes.</li><li><strong>Condensation</strong> – The water vapor cools and condenses on a cooler surface (such as a glass cover), forming droplets.</li><li><strong>Collection</strong> – The condensed water is collected and directed into a separate container for use.</li></ul>',
+                'features': '<h2>Key Features</h2><p>A solar distillation project focuses on harnessing solar energy to purify water. It is an efficient and eco-friendly method, ideal for areas with limited access to clean water.</p><ul><li><strong>Utilization of Solar Energy:</strong> Uses the sun\'s heat to evaporate and purify water, eliminating the need for electricity or fossil fuels.</li><li><strong>Simple and Cost-Effective Design:</strong> Typically consists of a water basin, transparent cover, and condensation collector.</li><li><strong>Water Purification Process:</strong> Removes salts, bacteria, heavy metals, and other contaminants.</li><li><strong>Passive vs. Active Systems:</strong> Passive stills rely on sunlight, while active stills use additional devices for higher efficiency.</li><li><strong>Low Maintenance and Durability:</strong> Minimal moving parts reduce the chances of failure.</li><li><strong>Environmental and Practical Benefits:</strong> Useful for remote areas, disaster relief, and desalination.</li></ul>',
+                'applications': '<h2>Applications</h2><ul><li><strong>Drinking water production:</strong> Essential for remote or arid regions.</li><li><strong>Desalination:</strong> Converts seawater into fresh water for coastal areas.</li><li><strong>Emergency water purification:</strong> Useful during natural disasters or contamination crises.</li><li><strong>Sustainable water solutions:</strong> Helps developing regions access clean drinking water.</li></ul>',
+                'usecase': '<h2>Advantages, Disadvantages, and Limitations</h2><p><strong>✅ Advantages:</strong> Uses renewable energy, eco-friendly, removes impurities, low maintenance, cost-effective.</p><p><strong>❌ Disadvantages:</strong> Slow process, weather-dependent, limited output.</p><p><strong>⚠ Limitations:</strong> Requires space, not suitable for industrial use, inefficiency in cold climates.</p>'
+            };
+            
+            document.getElementById('info').innerHTML = content[type];
+        }
+    </script>
+</body>
+</html>
